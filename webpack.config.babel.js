@@ -22,15 +22,13 @@ const config = {
     net: 'empty',
     dns: 'empty',
   },
-  devServer: {
-    contentBase: 'lib',
-    noInfo: true,
-    quiet: true,
-  },
 };
 
 switch (process.env.NODE_ENV) {
   case 'production':
+    // TODO:
+    // ERROR in index.browser.min.js from UglifyJs
+    // Unexpected token name «i», expected punc «;» [./~/.store/joi@8.4.0/_/lib/index.js:168,0]
     config.plugins = [
       new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }),
     ];
