@@ -46,6 +46,8 @@ naroujs().then(result => console.log(result));
 
 GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用します([CORS](https://developer.mozilla.org/ja/docs/HTTP_access_control)回避のため)。
 
+[API DEMO](http://jsdo.it/59naga/naroujs)
+
 API
 ---
 
