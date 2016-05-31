@@ -15,7 +15,7 @@ branches:
 env:
   global:
     # CODECLIMATE_REPO_TOKEN
-    - secure:
+    - secure: dtAytWQ2GNo9f0LkSJ6BFn6NCigs89i4evZbvJf8rMMRh9S+8hxV+bFe+rh5qN6eNcf0+lWtsyR/VfEJRZy0Q0rFwgoo9cF+AsPo2X2jzoKPs/yDLPsqwLtLFTq51SOQ1oL+BBuXlA/K7zWRWAiaaZEdN4xysd2CHDlhlbuu0HU6iu5KHRpoaOSD9ljQl9bDNIvZSXsnbPrTS6ScRvDGciSjTQKhGZPkv/rfMgqYr766DPf1OsjmdXOoySLctIEya6zKxssBFdlMNmlkkdGOwbGFOXy47v0q9XrgBhHvm4obcKSJaeyfXOJ0yiEH81dGGVTaQDM51WT/vhpoKoFf3qwNZ50xRPEmNiR+sVuT3ivMGLFA0jBrMDxRvA4aVypGbA4AaZcqpQ5RrdLnXtrX+2hiywB2AMWlkJlKC+izC9QcLQtdBuXIA9SwOgy6jQjrjnvzJBdqqwtpcXvi3YSW6Kd0jzOFAYFG6n3bvXRxWXvs4Uxrze5blUL1BcHaBSAKSzxH8y/7ohkL/YsLUQMA7VZACUROS++yiXVhkTBw+SKciwpnxq5f2PbunMOAhaWS6mpZ2BsQmp7aoiY4JhFOVjRNUHFbuGF5YlGFsXbqENnfgi0guZPSJj+MpCWOdK7V5PmqBlmCWNOc0U0rvfZSJgUo/eUsHCAzuzov5LkGUZo=
 
 # Language options
 language: node_js
@@ -23,6 +23,8 @@ before_install:
   - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
 node_js:
   - 4
+  - 5
+  - 6
 before_script:
   - npm prune
 script:
@@ -37,6 +39,6 @@ deploy:
   provider: npm
   email: i59naga@icloud.com
   api_key:
-    secure:
+    secure: gWZvw3vWA1EK2k9F4xWhm7R8Xa0lSYpQJXjd81hxWdh06mmTZwjstzQIAzHRcCbPZqWYAKKnmYMOXc1Qty1aFgPpd0xtzqePj7mVEtUzjVKWhB+9gRgZUq2E87kW0yWoRD6OrA9RzmaQBJYVoq40WFJM5WNstClmx9byayDGZXwqvVFjRDBcGZYkU+ofZGShKFymToli32ZRog4u1vWHLCXwzh3tLE2VUDNzKhyp+kJb997jWo0pcSqn6omkZTBQX9HX2fYVMZx79Z+axD8y9v9EvMda8DX9Y9gLHycmaHUew0dPm3cndrVpI49lCmTvWj6nJwgbHWaDaHnQXNxKYfP6Ti3vOw+LoIj4Uzg82KHp81BSlV0CEYQxMiZ9qCdBdIBDKlk3GB9xfXQv3OlVf/2FuFr/gDY+XORZLVWKpCmhjGmiTLkBn8NPm6YsJ2m/BgBusG9oXRfsp0NMuSX2PYRHR4TNnY4rTP4T1lDxCfTi9DLH1EOFLfpEVcWm95Sw3ILpChEnP8xS6xRVCmCKJ3kZg5vwRUb12/sRWJqtMEzgMqLwOI7Ls+aARQMHSdiHZ2xm0DpGXVSMZ1NHTnqKNvudvvwGNIOnRzMpzZCTvajYe7rSjo9OXojXecr9TfSSnY3v1Zk8NrQ5tkav7Zc2OOjuQqoCeWjlo4dweMby85U=
   on:
     node: 4
