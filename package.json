@@ -1,7 +1,7 @@
 {
   "name": "naroujs",
   "description": "a japanese novel sns syosetu.com api wrapper",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "lib",
   "browser": "lib/index.browser.min.js",
   "files": [
@@ -40,6 +40,8 @@
     "babel-preset-power-assert": "^1.0.0",
     "babel-preset-stage-1": "^6.5.0",
     "babel-register": "^6.7.2",
+    "buble": "^0.10.2",
+    "buble-loader": "^0.2.1",
     "codeclimate-test-reporter": "^0.3.1",
     "conventional-github-releaser": "^1.1.2",
     "eslint": "^2.8.0",
