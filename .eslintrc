@@ -1,0 +1,28 @@
+---
+extends: airbnb-base
+parser: babel-eslint
+plugins:
+  - async-await
+
+env:
+  node: true
+  mocha: true
+
+rules:
+  valid-jsdoc:
+    - 2
+    - prefer:
+        return: returns
+
+  max-len: 1
+  arrow-body-style: 1
+
+  complexity:
+    - 1
+    - max: 10
+
+  newline-per-chained-call: 1
+  no-param-reassign: 1
+
+  async-await/space-after-async: 2
+  async-await/space-after-await: 2

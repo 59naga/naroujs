@@ -1,0 +1,42 @@
+notifications:
+  email: false
+
+# Quick boot options
+sudo: false
+cache:
+  directories:
+    - node_modules
+
+# Ignore version tags
+branches:
+  except:
+    - /^v[0-9]/
+
+env:
+  global:
+    # CODECLIMATE_REPO_TOKEN
+    - secure:
+
+# Language options
+language: node_js
+before_install:
+  - if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
+node_js:
+  - 4
+before_script:
+  - npm prune
+script:
+  - npm run cover
+  - npm run lint
+
+# Npm publish options
+before_deploy:
+  - npm run build
+deploy:
+  skip_cleanup: true # keep the devDependencies
+  provider: npm
+  email: i59naga@icloud.com
+  api_key:
+    secure:
+  on:
+    node: 4

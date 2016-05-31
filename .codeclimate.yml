@@ -1,0 +1,8 @@
+engines:
+  eslint:
+    enabled: false
+ratings:
+  paths:
+  - src/**
+  - test/**
+  - "**.js"
