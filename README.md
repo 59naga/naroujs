@@ -24,7 +24,7 @@ naroujs
 インストール
 ---
 
-## NodeJS
+**NodeJS**
 ```bash
 npm install naroujs --save
 ```
@@ -36,7 +36,7 @@ naroujs().then(result => console.log(result));
 
 GET送信に[axios](https://github.com/mzabriskie/axios)を使用します。
 
-## ブラウザ
+**ブラウザ**
 ```html
 <script src="https://npmcdn.com/naroujs/lib/index.browser.min.js"></script>
 <script>
@@ -49,7 +49,7 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
 API
 ---
 
-URLパラメータをオブジェクトで第一引数に渡し、APIへリクエストを送ります。
+[URLパラメータ](#パラメーターの詳細)をオブジェクトで第一引数に渡し、APIへリクエストを送ります。
 結果は[Promise](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)でオブジェクトを返します。内容として
  * リクエストに使用した `uri`
  * リクエストに一致する全件数 `allcount`
@@ -119,7 +119,7 @@ APIの基準URLを`http://dev.syosetu.com/xman/api/`([なろう18禁小説API
 
 開発環境
 ---
-Requirement global
+下記が[グローバルインストール](https://github.com/creationix/nvm#readme)されていることが前提です。
 * NodeJS v5.11.1
 * Npm v3.8.6 (or [pnpm](https://github.com/rstacruz/pnpm))
 
