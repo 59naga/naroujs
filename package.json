@@ -30,7 +30,6 @@
     "assert-exception": "^1.1.0",
     "babel-cli": "^6.9.0",
     "babel-eslint": "^6.0.2",
-    "babel-generator": "^6.7.5",
     "babel-loader": "^6.2.4",
     "babel-plugin-add-module-exports": "^0.2.0",
     "babel-plugin-transform-bluebird": "^0.1.1",
