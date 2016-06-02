@@ -1,4 +1,4 @@
-import schema from './schema';
+import schema from './api/schema';
 import querystring from 'querystring';
 import { gunzip } from 'zlib';
 import axios from 'axios';
