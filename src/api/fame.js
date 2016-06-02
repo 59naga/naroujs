@@ -1,7 +1,7 @@
 import Joi from 'joi';
 
 export const schema = {
-  ncode: Joi.string().regex(/^n[\d\w]+$/i),
+  ncode: Joi.string().regex(/^n[\d\w]+$/i).required(),
 };
 
 export default {
