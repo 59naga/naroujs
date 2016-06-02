@@ -1,4 +1,3 @@
-// dependencies
 import assert from 'assert';
 
 // target

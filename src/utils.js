@@ -1,8 +1,5 @@
 import schema from './api/schema';
 import querystring from 'querystring';
-import { gunzip } from 'zlib';
-import axios from 'axios';
-import fetchJsonp from 'fetch-jsonp';
 
 const apis = {
   default: 'http://api.syosetu.com/novelapi/api/',
@@ -55,45 +52,4 @@ export function createUri(params, opts = {}) {
     data.gzip = 5;
   }
   return `${api}?${querystring.stringify(data)}`;
-}
-
-export function fetchNodeJs(uri) {
-  const options = {
-    responseType: 'arraybuffer',
-  };
-  return axios.get(uri, options)
-  .then(response => response.data)
-  .then(data => new Promise((resolve, reject) => {
-    gunzip(data, (error, buffer) => {
-      if (error) {
-        reject(error);
-        return;
-      }
-      resolve(buffer);
-    });
-  }))
-  .then(buffer => JSON.parse(buffer.toString()));
-}
-export function fetchBrowser(uri) {
-  return fetchJsonp(uri)
-  .then(response => response.json());
-}
-
-export function fetch(params = {}, opts = {}) {
-  let uri;
-  let promise;
-  if (typeof window === 'undefined') {
-    uri = createUri(params, opts);
-    promise = fetchNodeJs(uri);
-  } else {
-    uri = createUri(params, { ...opts, jsonp: true });
-    promise = fetchBrowser(uri);
-  }
-
-  return promise
-  .then(([result, ...items]) => {
-    normalizeNovelType(items);
-
-    return { uri, allcount: result.allcount, items };
-  });
 }

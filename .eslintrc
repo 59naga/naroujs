@@ -9,14 +9,7 @@ env:
   mocha: true
 
 rules:
-  valid-jsdoc:
-    - 2
-    - prefer:
-        return: returns
-
   max-len: 1
-  arrow-body-style: 1
-
   complexity:
     - 1
     - max: 10

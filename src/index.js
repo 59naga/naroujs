@@ -1,25 +1,27 @@
-import * as utils from './utils';
+/* eslint-disable prefer-const,import/no-mutable-exports */
+import fetch from './fetch';
 
-const entry = (...args) => {
-  return utils.fetch(...args);
-};
+let naroujs;
 
-entry.pickup = (params = {}) =>
-  entry({ ispickup: 1, order: 'hyoka', lim: 200, ...params });
+naroujs = (...args) =>
+  fetch(...args);
 
-entry.r18 = (params = {}) =>
-  entry(params, { r18: true });
+naroujs.pickup = (params = {}) =>
+  naroujs({ ispickup: 1, order: 'hyoka', lim: 200, ...params });
 
-entry.noc = (params = {}) =>
-  entry({ nocgenre: 1, ...params }, { r18: true });
+naroujs.r18 = (params = {}) =>
+  naroujs(params, { r18: true });
 
-entry.mnlt = (params = {}) =>
-  entry({ nocgenre: 2, ...params }, { r18: true });
+naroujs.noc = (params = {}) =>
+  naroujs({ nocgenre: 1, ...params }, { r18: true });
 
-entry.bl = (params = {}) =>
-  entry({ nocgenre: 3, ...params }, { r18: true });
+naroujs.mnlt = (params = {}) =>
+  naroujs({ nocgenre: 2, ...params }, { r18: true });
 
-entry.mid = (params = {}) =>
-  entry({ nocgenre: 4, ...params }, { r18: true });
+naroujs.bl = (params = {}) =>
+  naroujs({ nocgenre: 3, ...params }, { r18: true });
 
-export default entry;
+naroujs.mid = (params = {}) =>
+  naroujs({ nocgenre: 4, ...params }, { r18: true });
+
+export default naroujs;
