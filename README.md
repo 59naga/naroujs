@@ -19,10 +19,13 @@ naroujs
   </a>
 </p>
 
-「[小説家になろう](http://syosetu.com/)」[なろう小説API](http://dev.syosetu.com/man/api/) NodeJS/ブラウザー用 JavaScriptラッパー
+「[小説家になろう](http://syosetu.com/)」[デベロッパー](http://dev.syosetu.com/) NodeJS/ブラウザー用 JavaScriptラッパー
 
 インストール
 ---
+
+| インストール | [なろう小説API] | [なろう小説ランキングAPI] | [なろう殿堂入りAPI] | [なろう18禁小説API] |
+|---|---|---|---|---|
 
 **NodeJS**
 ```bash
@@ -48,8 +51,11 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
 
 [API DEMO](http://jsdo.it/59naga/naroujs)
 
-なろう小説API/なろう18禁小説API
+なろう小説API
 ---
+
+| [インストール] | なろう小説API | [なろう小説ランキングAPI] | [なろう殿堂入りAPI] | [なろう18禁小説API] |
+|---|---|---|---|---|
 
 * `naroujs(params)` -> `Promise<result>`
 
@@ -84,40 +90,17 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
   http://api.syosetu.com/novelapi/api/?ispickup=1&order=hyoka&lim=200
   小説家になろうで使っている小説ピックアップの情報を取得するURLです。
 
-* `naroujs.r18(params)` -> `Promise<result>`
-
-  APIの基準URLを`http://dev.syosetu.com/xman/api/`([なろう18禁小説API
-  ](http://dev.syosetu.com/xman/api/))に変更して、リクエストを発行します。
-
-* `naroujs.noc(params)` -> `Promise<result>`
-
-  `naroujs.r18`と同じですが、`params`のデフォルト値として`{nocgenre: 1}`を持ちます。
-  「ノクターンノベルズ(男性向け)」を検索対象とします。
-
-* `naroujs.mnlt(params)` -> `Promise<result>`
-
-  `naroujs.r18`と同じですが、`params`のデフォルト値として`{nocgenre: 2}`を持ちます。
-  「ムーンライトノベルズ(女性向け)」を検索対象とします。
-
-* `naroujs.bl(params)` -> `Promise<result>`
-
-  `naroujs.r18`と同じですが、`params`のデフォルト値として`{nocgenre: 3}`を持ちます。
-  「ムーンライトノベルズ(BL)」を検索対象とします。
-
-* `naroujs.mid(params)` -> `Promise<result>`
-
-  `naroujs.r18`と同じですが、`params`のデフォルト値として`{nocgenre: 4}`を持ちます。
-  「ミッドナイトノベルズ(大人向け)」を検索対象とします。
-
 **パラメーターの詳細**
 
  - [出力GETパラメータ / なろう小説API](http://dev.syosetu.com/man/api/#link3)
  - [条件抽出GETパラメータ / なろう小説API](http://dev.syosetu.com/man/api/#link5)
  - [ofパラメータ / なろう小説API](http://dev.syosetu.com/man/api/#of_parm)
- - [なろう18禁小説API](http://dev.syosetu.com/xman/api/)
 
 なろう小説ランキングAPI
 ---
+
+| [インストール] | [なろう小説API] | なろう小説ランキングAPI | [なろう殿堂入りAPI] | [なろう18禁小説API] |
+|---|---|---|---|---|
 
 * `naroujs.rank(params)` -> `Promise<result>`
 
@@ -139,10 +122,13 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
 
 **パラメーターの詳細**
 
- - [なろう小説ランキングAPI](http://dev.syosetu.com/man/rankapi/#link3)
+ - [GETパラメータ / なろう小説ランキングAPI](http://dev.syosetu.com/man/rankapi/#link3)
 
 なろう殿堂入りAPI
 ---
+
+| [インストール] | [なろう小説API] | [なろう小説ランキングAPI] | なろう殿堂入りAPI | [なろう18禁小説API] |
+|---|---|---|---|---|
 
 * `naroujs.fame(params)` -> `Promise<result>`
 
@@ -159,11 +145,49 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
   //   items:
   //    [
   //      { pt: 623, rank: 11, rtype: '20130501-d' },
+  //      ...
   ```
 
 **パラメーターの詳細**
 
- - [なろう殿堂入りAPI](http://dev.syosetu.com/man/rankinapi/#link3)
+ - [GETパラメータ / なろう殿堂入りAPI](http://dev.syosetu.com/man/rankinapi/#link3)
+
+なろう18禁小説API
+---
+
+| [インストール] | [なろう小説API] | [なろう小説ランキングAPI] | [なろう殿堂入りAPI] | なろう18禁小説API |
+|---|---|---|---|---|
+
+ * `naroujs.r18(params)` -> `Promise<result>`
+
+   APIの基準URLを`http://api.syosetu.com/novel18api/api/`([なろう18禁小説API
+   ](http://api.syosetu.com/novel18api/api/))に変更して、リクエストを発行します。
+
+ * `naroujs.noc(params)` -> `Promise<result>`
+
+   `naroujs.r18`と同じですが、`params`のデフォルト値として`{nocgenre: 1}`を持ちます。
+   「ノクターンノベルズ(男性向け)」を検索対象とします。
+
+ * `naroujs.mnlt(params)` -> `Promise<result>`
+
+   `naroujs.r18`と同じですが、`params`のデフォルト値として`{nocgenre: 2}`を持ちます。
+   「ムーンライトノベルズ(女性向け)」を検索対象とします。
+
+ * `naroujs.bl(params)` -> `Promise<result>`
+
+   `naroujs.r18`と同じですが、`params`のデフォルト値として`{nocgenre: 3}`を持ちます。
+   「ムーンライトノベルズ(BL)」を検索対象とします。
+
+ * `naroujs.mid(params)` -> `Promise<result>`
+
+   `naroujs.r18`と同じですが、`params`のデフォルト値として`{nocgenre: 4}`を持ちます。
+   「ミッドナイトノベルズ(大人向け)」を検索対象とします。
+
+**パラメーターの詳細**
+
+ - [出力GETパラメータ / なろう18禁小説API](http://dev.syosetu.com/xman/api/#link3)
+ - [条件抽出GETパラメータ / なろう18禁小説API](http://dev.syosetu.com/xman/api/#link5)
+ - [ofパラメータ / なろう18禁小説API](http://dev.syosetu.com/xman/api/#of_parm)
 
 ほか、参考文献
 ---
@@ -190,3 +214,10 @@ npm test
 License
 ---
 [MIT](http://59naga.mit-license.org/)
+
+
+[インストール]: README.md#インストール
+[なろう小説API]: README.md#なろう小説api
+[なろう小説ランキングAPI]: README.md#なろう小説ランキングapi
+[なろう殿堂入りAPI]: README.md#なろう殿堂入りapi
+[なろう18禁小説API]: README.md#なろう18禁小説api
