@@ -25,12 +25,16 @@ export function fetchBrowser(uri) {
 export default (params = {}, opts = {}) => {
   let uri;
   let promise;
-  if (typeof window === 'undefined') {
-    uri = utils.createUri(params, opts);
-    promise = fetchNodeJs(uri);
-  } else {
-    uri = utils.createUri(params, { ...opts, jsonp: true });
-    promise = fetchBrowser(uri);
+  try {
+    if (typeof window === 'undefined') {
+      uri = utils.createUri(params, opts);
+      promise = fetchNodeJs(uri);
+    } else {
+      uri = utils.createUri(params, { ...opts, jsonp: true });
+      promise = fetchBrowser(uri);
+    }
+  } catch (error) {
+    return Promise.reject(error);
   }
 
   return promise
