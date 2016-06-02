@@ -38,9 +38,14 @@ export default (params = {}, opts = {}) => {
   }
 
   return promise
-  .then(([result, ...items]) => {
-    utils.normalizeNovelType(items);
+  .then((json) => {
+    if (json[0].allcount !== undefined) {
+      const [result, ...items] = json;
+      utils.normalizeNovelType(items);
 
-    return { uri, allcount: result.allcount, items };
+      return { uri, allcount: result.allcount, items };
+    }
+
+    return { uri, items: json };
   });
 };

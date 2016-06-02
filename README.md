@@ -119,7 +119,23 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
 なろう小説ランキングAPI
 ---
 
- - [ ] まもなく作成予定
+* `naroujs.rank(params)` -> `Promise<result>`
+
+  APIの基準URLを`http://dev.syosetu.com/man/rankapi/`([なろう小説ランキングAPI
+  ](http://dev.syosetu.com/man/rankapi/))に変更して、リクエストを発行します。内容として
+   * リクエストに使用した `uri`
+   * リクエストに一致する結果 `items`
+  を持ちます。
+
+  ```js
+  naroujs.rank({rtype: '20130501-m'}).then(result => console.log(result));
+  // {
+  //   uri: 'http://api.syosetu.com/rank/rankget/?rtype=20130501-m&out=json&gzip=5',
+  //   items:
+  //    [
+  //      { ncode: 'N7648BN', pt: 36092, rank: 1 },
+  //      ...
+  ```
 
 **パラメーターの詳細**
 
@@ -128,7 +144,22 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
 なろう殿堂入りAPI
 ---
 
- - [ ] まもなく作成予定
+* `naroujs.fame(params)` -> `Promise<result>`
+
+  APIの基準URLを`http://dev.syosetu.com/man/rankinapi/`([なろう殿堂入りAPI
+  ](http://dev.syosetu.com/man/rankinapi/))に変更して、リクエストを発行します。内容として
+   * リクエストに使用した `uri`
+   * リクエストに一致する結果 `items`
+  を持ちます。
+
+  ```js
+  naroujs.fame({ncode: 'n9669bk'}).then(result => console.log(result));
+  // {
+  //   uri: 'http://api.syosetu.com/rank/rankin/?ncode=n9669bk&out=json&gzip=5',
+  //   items:
+  //    [
+  //      { pt: 623, rank: 11, rtype: '20130501-d' },
+  ```
 
 **パラメーターの詳細**
 

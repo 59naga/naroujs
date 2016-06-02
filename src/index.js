@@ -24,4 +24,10 @@ naroujs.bl = (params = {}) =>
 naroujs.mid = (params = {}) =>
   naroujs({ nocgenre: 4, ...params }, { api: 'novel18api' });
 
+naroujs.rank = (params = {}) =>
+  naroujs(params, { api: 'rank' });
+
+naroujs.fame = (params = {}) =>
+  naroujs(params, { api: 'fame' });
+
 export default naroujs;
