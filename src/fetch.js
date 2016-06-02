@@ -10,13 +10,15 @@ export function fetchNodeJs(uri) {
   const options = {
     responseType: 'arraybuffer',
   };
-  return axios.get(uri, options)
+  return Promise.resolve()
+  .then(() => axios.get(uri, options))
   .then(response => response.data)
   .then(data => gunzipAsync(data))
   .then(buffer => JSON.parse(buffer.toString()));
 }
 export function fetchBrowser(uri) {
-  return fetchJsonp(uri)
+  return Promise.resolve()
+  .then(() => fetchJsonp(uri))
   .then(response => response.json());
 }
 
