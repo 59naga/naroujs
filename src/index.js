@@ -10,18 +10,18 @@ naroujs.pickup = (params = {}) =>
   naroujs({ ispickup: 1, order: 'hyoka', lim: 200, ...params });
 
 naroujs.r18 = (params = {}) =>
-  naroujs(params, { r18: true });
+  naroujs(params, { api: 'novel18api' });
 
 naroujs.noc = (params = {}) =>
-  naroujs({ nocgenre: 1, ...params }, { r18: true });
+  naroujs({ nocgenre: 1, ...params }, { api: 'novel18api' });
 
 naroujs.mnlt = (params = {}) =>
-  naroujs({ nocgenre: 2, ...params }, { r18: true });
+  naroujs({ nocgenre: 2, ...params }, { api: 'novel18api' });
 
 naroujs.bl = (params = {}) =>
-  naroujs({ nocgenre: 3, ...params }, { r18: true });
+  naroujs({ nocgenre: 3, ...params }, { api: 'novel18api' });
 
 naroujs.mid = (params = {}) =>
-  naroujs({ nocgenre: 4, ...params }, { r18: true });
+  naroujs({ nocgenre: 4, ...params }, { api: 'novel18api' });
 
 export default naroujs;

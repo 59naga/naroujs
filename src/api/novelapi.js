@@ -1,14 +1,7 @@
+import { createHyphonRegexp, rangeRegexp } from './helpers';
 import Joi from 'joi';
 
-// e.g. [1,2,3] -> /^((1|2|3)-?)*$/
-const createHyphonRegexp = (valid = []) => {
-  const validList = valid instanceof Array ? valid : [valid];
-  return new RegExp(`^((${validList.join('|')})-?)*\$`, 'i');
-};
-const rangeRegexp = /^(\d+)?-?(\d+)?$/;
-
 const valid = {
-  out: ['yaml', 'json', 'php'],
   order: [
     'allunique',
     'favnovelcnt',
@@ -111,19 +104,9 @@ const valid = {
     'lastmonth',
     '(\\d+)?-?(\\d+)?',
   ],
-  // for r18
-  nocgenre: [
-    1,
-    2,
-    3,
-    4,
-  ],
 };
 
-export default Joi.object().keys({
-  // out: Joi.string().valid(...valid.out).default('json'),
-  // gzip: Joi.number().min(1).max(5).default(5),
-
+export const schema = {
   lim: Joi.number().min(1).max(500),
   st: Joi.number().min(1).max(2000),
   of: Joi.string().regex(createHyphonRegexp(valid.of)),
@@ -180,9 +163,9 @@ export default Joi.object().keys({
   ispickup: Joi.number().valid(1, 0),
 
   lastup: Joi.string().regex(new RegExp(`^(${valid.lastup.join('|')})\$`)),
+};
 
-  // for r18
-  xid: Joi.string().regex(createHyphonRegexp('[\\d\\w]+')),
-  nocgenre: Joi.string().regex(createHyphonRegexp(valid.nocgenre)),
-  notnocgenre: Joi.string().regex(createHyphonRegexp(valid.nocgenre)),
-});
+export default {
+  url: 'http://api.syosetu.com/novelapi/api/',
+  schema: Joi.object(schema),
+};

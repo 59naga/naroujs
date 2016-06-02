@@ -39,7 +39,7 @@ describe('naroujs', () => {
         notnocgenre: [2, 3, 4],
       };
       const response = await naroujs.r18(params);
-      assert(response.uri === utils.createUri(params, { r18: true }));
+      assert(response.uri === utils.createUri(params, { api: 'novel18api' }));
       assert(response.allcount === 2);
       assert(response.items[0].title === 'エルフの国の宮廷魔導師になれたので、とりあえず姫様に性的な悪戯をしてみました。');
       assert(response.items[1].title === '姫騎士と呼ばないでっ！？');

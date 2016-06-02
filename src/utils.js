@@ -1,10 +1,5 @@
-import schema from './api/schema';
+import * as api from './api';
 import querystring from 'querystring';
-
-const apis = {
-  default: 'http://api.syosetu.com/novelapi/api/',
-  r18: 'http://api.syosetu.com/novel18api/api/',
-};
 
 export function stringifyValues(object = {}) {
   const stringifidObject = {};
@@ -39,7 +34,8 @@ export function normalizeNovelType(items) {
 }
 
 export function createUri(params, opts = {}) {
-  const api = opts.r18 ? apis.r18 : apis.default;
+  const type = opts.api || 'novelapi';
+  const { url, schema } = api[type];
   const { error, value } = schema.validate(stringifyValues(params));
   if (error) {
     throw error;
@@ -51,5 +47,5 @@ export function createUri(params, opts = {}) {
     data.out = 'json';
     data.gzip = 5;
   }
-  return `${api}?${querystring.stringify(data)}`;
+  return `${url}?${querystring.stringify(data)}`;
 }
