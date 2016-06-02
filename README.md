@@ -139,7 +139,7 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
 
 **パラメーターの詳細**
 
- - [なろう小説ランキングAPI](http://dev.syosetu.com/man/rankapi/)
+ - [なろう小説ランキングAPI](http://dev.syosetu.com/man/rankapi/#link3)
 
 なろう殿堂入りAPI
 ---
@@ -163,7 +163,7 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
 
 **パラメーターの詳細**
 
- - [なろう殿堂入りAPI](http://dev.syosetu.com/man/rankinapi/)
+ - [なろう殿堂入りAPI](http://dev.syosetu.com/man/rankinapi/#link3)
 
 ほか、参考文献
 ---
