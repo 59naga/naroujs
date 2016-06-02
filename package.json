@@ -1,7 +1,7 @@
 {
   "name": "naroujs",
   "description": "a japanese novel sns syosetu.com api wrapper",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "main": "lib",
   "browser": "lib/index.browser.min.js",
   "files": [
