@@ -80,7 +80,7 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
 
 * `naroujs.pickup(params)` -> `Promise<result>`
 
-  `naroujs`と同じですが、`params`のデフォルト値として`{{ ispickup: 1, order: 'hyoka', lim: 200 }`を持ちます。
+  `naroujs`と同じですが、`params`のデフォルト値として`{ ispickup: 1, order: 'hyoka', lim: 200 }`を持ちます。
   > [▽ピックアップ指定/・条件抽出GETパラメータ / なろう小説API](http://dev.syosetu.com/man/api/#link5)
 
   > 注意
@@ -107,8 +107,8 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
 
 * `naroujs.rank(params)` -> `Promise<result>`
 
-  APIの基準URLを`http://dev.syosetu.com/man/rankapi/`([なろう小説ランキングAPI
-  ](http://dev.syosetu.com/man/rankapi/))に変更して、リクエストを発行します。内容として
+  APIの基準URLを`http://api.syosetu.com/rank/rankget/`([なろう小説ランキングAPI
+  ](http://api.syosetu.com/rank/rankget/?rtype=20130501-m))に変更して、リクエストを発行します。内容として
    * リクエストに使用した `uri`
    * リクエストに一致する結果 `items`
   を持ちます。
@@ -137,8 +137,8 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
 
 * `naroujs.fame(params)` -> `Promise<result>`
 
-  APIの基準URLを`http://dev.syosetu.com/man/rankinapi/`([なろう殿堂入りAPI
-  ](http://dev.syosetu.com/man/rankinapi/))に変更して、リクエストを発行します。内容として
+  APIの基準URLを`http://api.syosetu.com/rank/rankin/`([なろう殿堂入りAPI
+  ](http://api.syosetu.com/rank/rankin/?ncode=n9669bk))に変更して、リクエストを発行します。内容として
    * リクエストに使用した `uri`
    * リクエストに一致する結果 `items`
   を持ちます。
