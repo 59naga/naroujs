@@ -97,6 +97,8 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
  - [条件抽出GETパラメータ / なろう小説API](http://dev.syosetu.com/man/api/#link5)
  - [ofパラメータ / なろう小説API](http://dev.syosetu.com/man/api/#of_parm)
 
+`gzip`と`out`は現在指定できません。NodeJSでは`gzip=5,out=json`、ブラウザでは`out=jsonp`固定になります。
+
 なろう小説ランキングAPI
 ---
 
@@ -125,6 +127,8 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
 
  - [GETパラメータ / なろう小説ランキングAPI](http://dev.syosetu.com/man/rankapi/#link3)
 
+`gzip`と`out`は現在指定できません。NodeJSでは`gzip=5,out=json`、ブラウザでは`out=jsonp`固定になります。
+
 なろう殿堂入りAPI
 ---
 
@@ -152,6 +156,8 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
 **パラメーターの詳細**
 
  - [GETパラメータ / なろう殿堂入りAPI](http://dev.syosetu.com/man/rankinapi/#link3)
+
+`gzip`と`out`は現在指定できません。NodeJSでは`gzip=5,out=json`、ブラウザでは`out=jsonp`固定になります。
 
 なろう18禁小説API
 ---
@@ -189,6 +195,8 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
  - [出力GETパラメータ / なろう18禁小説API](http://dev.syosetu.com/xman/api/#link3)
  - [条件抽出GETパラメータ / なろう18禁小説API](http://dev.syosetu.com/xman/api/#link5)
  - [ofパラメータ / なろう18禁小説API](http://dev.syosetu.com/xman/api/#of_parm)
+
+`gzip`と`out`は現在指定できません。NodeJSでは`gzip=5,out=json`、ブラウザでは`out=jsonp`固定になります。
 
 ほか、参考文献
 ---
