@@ -207,6 +207,11 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
 ---
 このアプリケーションは非公式のもので、[株式会社ヒナプロジェクト](http://hinaproject.co.jp/)が提供しているものではありません。
 
+
+関連するプロジェクト
+---
+* [scrape-narou - NodeJS用 小説本文取得ライブラリ](https://github.com/59naga/scrape-narou#readme)
+
 開発環境
 ---
 下記が[グローバルインストール](https://github.com/creationix/nvm#readme)されていることが前提です。
