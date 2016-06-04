@@ -64,6 +64,7 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
    * リクエストに使用した `uri`
    * リクエストに一致する全件数 `allcount`
    * リクエストに一致する結果 `items`
+  
   を持ちます。
 
   ```js
