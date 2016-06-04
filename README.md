@@ -112,6 +112,7 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
   ](http://api.syosetu.com/rank/rankget/?rtype=20130501-m))に変更して、リクエストを発行します。内容として
    * リクエストに使用した `uri`
    * リクエストに一致する結果 `items`
+  
   を持ちます。
 
   ```js
@@ -142,6 +143,7 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
   ](http://api.syosetu.com/rank/rankin/?ncode=n9669bk))に変更して、リクエストを発行します。内容として
    * リクエストに使用した `uri`
    * リクエストに一致する結果 `items`
+  
   を持ちます。
 
   ```js
