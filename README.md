@@ -213,6 +213,7 @@ GET送信に[fetch-jsonp](https://github.com/camsong/fetch-jsonp)を使用しま
 関連するプロジェクト
 ---
 * [scrape-narou - NodeJS用 小説本文取得ライブラリ](https://github.com/59naga/scrape-narou#readme)
+* [narou-middleware - Express4用 小説家になろう 非公式ミドルウェア](https://github.com/59naga/narou-middleware#readme)
 
 開発環境
 ---
