@@ -39,9 +39,9 @@ naroujs().then(result => console.log(result));
 
 GET送信に[axios](https://github.com/mzabriskie/axios)を使用します。
 
-**ブラウザ**（[Download](https://npmcdn.com/naroujs/lib/index.browser.min.js)）
+**ブラウザ**（[Download](https://unpkg.com/naroujs/lib/index.browser.min.js)）
 ```html
-<script src="https://npmcdn.com/naroujs/lib/index.browser.min.js"></script>
+<script src="https://unpkg.com/naroujs/lib/index.browser.min.js"></script>
 <script>
 naroujs().then(result => console.log(result));
 </script>
