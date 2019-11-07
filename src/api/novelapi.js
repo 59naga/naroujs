@@ -1,5 +1,6 @@
-import { createHyphonRegexp, rangeRegexp } from './helpers';
 import Joi from 'joi';
+import { createHyphonRegexp, rangeRegexp } from './helpers';
+import { protocol } from './constant';
 
 const valid = {
   order: [
@@ -166,6 +167,6 @@ export const schema = {
 };
 
 export default {
-  url: 'http://api.syosetu.com/novelapi/api/',
+  url: `${protocol}//api.syosetu.com/novelapi/api/`,
   schema: Joi.object(schema),
 };

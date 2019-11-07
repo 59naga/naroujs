@@ -1,6 +1,7 @@
+import Joi from 'joi';
 import { createHyphonRegexp } from './helpers';
 import { schema as baseSchema } from './novelapi';
-import Joi from 'joi';
+import { protocol } from './constant';
 
 const valid = {
   nocgenre: [
@@ -19,6 +20,6 @@ export const schema = {
 };
 
 export default {
-  url: 'http://api.syosetu.com/novel18api/api/',
+  url: `${protocol}//api.syosetu.com/novel18api/api/`,
   schema: Joi.object(schema),
 };
