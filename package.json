@@ -9,7 +9,7 @@
   ],
   "dependencies": {
     "axios": "^0.12.0",
-    "bluebird": "^3.4.0",
+    "bluebird": "3.5.5",
     "fetch-jsonp": "^1.0.0",
     "joi": "^8.4.0"
   },
