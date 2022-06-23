@@ -8,7 +8,7 @@
   "dependencies": {
     "@types/cheerio": "^0.22.31",
     "cheerio": "^1.0.0-rc.10",
-    "got": "^11.8.3",
+    "got": "^11.8.5",
     "joi": "^17.6.0"
   },
   "devDependencies": {
